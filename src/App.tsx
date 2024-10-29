@@ -4,12 +4,13 @@ import MenuRoute from './routes/MenuRoute';
 import GlobalStyle from './styles/globalStyle';
 
 function App() {
-  const siteName = process.env.REACT_APP_NAME;
+  const siteName = process.env.REACT_APP_NAME as string;
+  const title = siteName.toUpperCase();
 
   return (
     <>
       <Helmet>
-        <title>{`${siteName}`}</title>
+        <title>{`${title}`}</title>
       </Helmet>
       <GlobalStyle />
       <MenuRoute />
