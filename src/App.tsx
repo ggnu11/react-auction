@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
-import './App.css';
 import './assets/css/fonts.css';
 import { languages, Languages } from './Locales/i18n';
 import GlobalStyle from './styles/globalStyle';
