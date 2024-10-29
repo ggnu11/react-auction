@@ -11,7 +11,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="text-3xl bg-blue-500">
       <p>{t('title')}</p>
       <p>{t('description')}</p>
       {languages.map((lang) => (
