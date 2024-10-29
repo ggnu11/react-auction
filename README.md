@@ -56,5 +56,6 @@
 
 ## 7. GlobalStyle + font.css 적용
 
-- `NotoSansKR`을 설치하고 `font.css` 파일을 생성한 후 `@font-face`를 적용한다.
+- `yarn add styled-reset`로 `styled-reset` 라이브러리를 설치
+- 구글에서 `NotoSansKR`을 다운받고 `font.css` 파일을 생성한 후 `@font-face`를 적용한다.
 - `GlobalStyle.ts`파일을 생성하고 스타일을 설정한 후 `App.tsx`에 `import`하여 불러온다.
