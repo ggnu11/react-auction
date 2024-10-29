@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { RecoilRoot } from 'recoil';
+import App from './App';
+import './index.css';
+import './Locales/i18n';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -14,15 +15,21 @@ const queryClient = new QueryClient({
     },
   },
 });
+window.onload = () => {
+  console.log('language :: ', window.navigator.language);
+  render();
+};
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
-root.render(
-  <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <RecoilRoot>
-        <App />
-      </RecoilRoot>
-    </QueryClientProvider>
-  </React.StrictMode>
-);
+function render() {
+  root.render(
+    <React.StrictMode>
+      <QueryClientProvider client={queryClient}>
+        <RecoilRoot>
+          <App />
+        </RecoilRoot>
+      </QueryClientProvider>
+    </React.StrictMode>
+  );
+}
