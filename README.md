@@ -59,3 +59,18 @@
 - `yarn add styled-reset`로 `styled-reset` 라이브러리를 설치
 - 구글에서 `NotoSansKR`을 다운받고 `font.css` 파일을 생성한 후 `@font-face`를 적용한다.
 - `GlobalStyle.ts`파일을 생성하고 스타일을 설정한 후 `App.tsx`에 `import`하여 불러온다.
+
+## 8. Router 설정
+
+- `yarn add react-router`, `react-router-dom`, `yarn add --dev @types/react-router @types/react-router-dom` 명령어로 라이브러리 설치
+- `routes` 폴더 안에 `MenuRoute.tsx` 생성 후 다음 코드 추가
+
+```
+const router = createBrowserRouter([{ path: '/', element: <Login /> }]);
+
+const MenuRoute = () => {
+  return <RouterProvider router={router} />;
+};
+
+export default MenuRoute;
+```
