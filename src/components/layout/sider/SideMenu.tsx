@@ -1,5 +1,5 @@
+import { HomeOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons';
 import { Layout, Menu } from 'antd';
-import { HomeOutlined, UserOutlined, SettingOutlined } from '@ant-design/icons';
 import { useRecoilValue } from 'recoil';
 import { isOpenSideMenu } from '../../../recoil/layout';
 

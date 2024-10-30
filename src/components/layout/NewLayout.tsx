@@ -1,7 +1,7 @@
 import { Layout } from 'antd';
-import NewHeader from './header/NewHeader';
 import { Footer } from 'antd/es/layout/layout';
 import { Outlet } from 'react-router';
+import NewHeader from './header/NewHeader';
 import SideMenu from './sider/SideMenu';
 
 const { Content } = Layout;
