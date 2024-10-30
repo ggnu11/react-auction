@@ -60,6 +60,8 @@
 - 구글에서 `NotoSansKR`을 다운받고 `font.css` 파일을 생성한 후 `@font-face`를 적용한다.
 - `GlobalStyle.ts`파일을 생성하고 스타일을 설정한 후 `App.tsx`에 `import`하여 불러온다.
 
+<br/>
+
 ## 8. Router 설정
 
 - `yarn add react-router`, `react-router-dom`, `yarn add --dev @types/react-router @types/react-router-dom` 명령어로 라이브러리 설치
@@ -74,3 +76,10 @@ const MenuRoute = () => {
 
 export default MenuRoute;
 ```
+
+<br/>
+
+## 9. antd(Ant-Design) 설치
+
+- `yarn add antd @types/antd`, `yarn add @ant-design/icons` 명령어로 antd, antd(타입), antd에서 제공하는 아이콘을 사용할때에 필요한 라이브러리를 설치한다.
+- https://ant.design/components/layout 사이트에 들어가서 원하는 레이아웃을 선택한 후 화면에 적용한다.
