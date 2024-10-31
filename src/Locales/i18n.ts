@@ -8,9 +8,13 @@ const resources = {
   kr: { translation: kr },
 };
 
+const lng = localStorage.getItem('recoil-persist')
+  ? JSON.parse(localStorage.getItem('recoil-persist') as string).currentLanguage
+  : 'kr';
+
 i18n.use(initReactI18next).init({
   resources,
-  lng: 'kr',
+  lng,
   fallbackLng: {
     'en-US': ['en-US'],
     default: ['kr-KR'],

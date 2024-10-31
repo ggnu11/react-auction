@@ -1,20 +1,21 @@
-import { Button } from 'antd';
 import { useTranslation } from 'react-i18next';
+import { useRecoilState } from 'recoil';
+import { currentLanguage } from '../../recoil/layout';
+import { Button } from 'antd';
 
 const TranslateButton = () => {
   const { i18n } = useTranslation();
-  const currentLanguage = i18n.language;
+  const [language, setLanguage] = useRecoilState(currentLanguage);
 
   const handleClickTranslate = () => {
-    if (i18n.language === 'kr') {
-      i18n.changeLanguage('en');
-    } else {
-      i18n.changeLanguage('kr');
-    }
+    const nextLanguage = language === 'en' ? 'kr' : 'en';
+    setLanguage(nextLanguage);
+    i18n.changeLanguage(nextLanguage);
   };
+
   return (
     <Button type="primary" shape="circle" onClick={handleClickTranslate}>
-      {currentLanguage.toUpperCase()}
+      {language.toUpperCase()}
     </Button>
   );
 };
