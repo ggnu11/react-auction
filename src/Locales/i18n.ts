@@ -8,19 +8,26 @@ const resources = {
   kr: { translation: kr },
 };
 
-const userLanguage = window.navigator.language;
-
 i18n.use(initReactI18next).init({
   resources,
-  lng: localStorage.getItem('language') || userLanguage || 'en',
-  fallbackLng: 'en',
+  lng: 'kr',
+  fallbackLng: {
+    'en-US': ['en-US'],
+    default: ['kr-KR'],
+  },
+  debug: true,
+  defaultNS: 'translation',
+  ns: 'translation',
   keySeparator: false,
   interpolation: {
     escapeValue: false,
+  },
+  react: {
+    useSuspense: false,
   },
 });
 
 export default i18n;
 
 export const languages = ['en', 'kr'] as const;
-export type Languages = (typeof languages)[number];
+export type languagesProps = (typeof languages)[number];
