@@ -8,19 +8,30 @@ const resources = {
   kr: { translation: kr },
 };
 
-const userLanguage = window.navigator.language;
+const lng = localStorage.getItem('recoil-persist')
+  ? JSON.parse(localStorage.getItem('recoil-persist') as string).currentLanguage
+  : 'kr';
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: localStorage.getItem('language') || userLanguage || 'en',
-  fallbackLng: 'en',
+  lng,
+  fallbackLng: {
+    'en-US': ['en-US'],
+    default: ['kr-KR'],
+  },
+  debug: true,
+  defaultNS: 'translation',
+  ns: 'translation',
   keySeparator: false,
   interpolation: {
     escapeValue: false,
+  },
+  react: {
+    useSuspense: false,
   },
 });
 
 export default i18n;
 
 export const languages = ['en', 'kr'] as const;
-export type Languages = (typeof languages)[number];
+export type languagesProps = (typeof languages)[number];
