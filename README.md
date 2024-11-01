@@ -43,6 +43,14 @@ module.exports = {
   plugins: [],
 };
 ```
+- `postcss.config.js`파일에 다음 코드 추가
+```
+plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+    require('postcss-flexbugs-fixes'),
+  ],
+```
 - index.css파일을 삭제하고 `src\assets\css\tailwind.css`파일을 생성 후 `tailwind.css` 상단에 `@tailwind base`, `@tailwind components`, `@tailwind utilities` 추가
 - Extensions에서 `Tailwind CSS IntelliSense` 설치
 - `index.tsx`에 `import './assets/css/tailwind.css';` 추가
