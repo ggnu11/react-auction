@@ -33,6 +33,7 @@
 - `yarn add -D tailwindcss postcss autoprefixer` 명령어로 라이브러리, 패키지 설치
 - `yarn tailwind init -p` 명령어로 tailwindcss config 파일 생성 / 초기화
 - tailwind.config.js 에 다음 코드 추가
+```
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
@@ -41,6 +42,7 @@ module.exports = {
   },
   plugins: [],
 };
+```
 - index.css파일을 삭제하고 `src\assets\css\tailwind.css`파일을 생성 후 `tailwind.css` 상단에 `@tailwind base`, `@tailwind components`, `@tailwind utilities` 추가
 - Extensions에서 `Tailwind CSS IntelliSense` 설치
 - `index.tsx`에 `import './assets/css/tailwind.css';` 추가
