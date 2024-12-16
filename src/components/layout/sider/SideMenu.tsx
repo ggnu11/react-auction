@@ -2,12 +2,17 @@ import { HomeOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons';
 import { Layout, Menu } from 'antd';
 import { useRecoilValue } from 'recoil';
 import { isOpenSideMenu } from '../../../recoil/layout';
+import { useNavigate } from 'react-router';
 
 const { Sider } = Layout;
 
 const SideMenu = () => {
   const sideMenuState = useRecoilValue(isOpenSideMenu);
+  const navigate = useNavigate();
 
+  const handleMenuClick = (path: string) => {
+    navigate(path);
+  };
   return (
     <Sider
       className={`bg-white shadow-lg overflow-auto h-screen fixed inset-y-0 left-0 scrollbar-thin scrollbar-gutter-stable transition-transform duration-300 ${
@@ -18,13 +23,13 @@ const SideMenu = () => {
         <div className="text-xl font-bold text-center">Logo</div>
       </div>
       <Menu theme="light" mode="inline" defaultSelectedKeys={['1']} className="mt-14">
-        <Menu.Item key="1" icon={<HomeOutlined />}>
+        <Menu.Item key="1" icon={<HomeOutlined />} onClick={() => handleMenuClick('/')}>
           Home
         </Menu.Item>
-        <Menu.Item key="2" icon={<UserOutlined />}>
+        <Menu.Item key="2" icon={<UserOutlined />} onClick={() => handleMenuClick('/profile')}>
           Profile
         </Menu.Item>
-        <Menu.Item key="3" icon={<SettingOutlined />}>
+        <Menu.Item key="3" icon={<SettingOutlined />} onClick={() => handleMenuClick('/settings')}>
           Settings
         </Menu.Item>
       </Menu>

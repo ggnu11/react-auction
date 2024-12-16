@@ -5,7 +5,7 @@ import Dashboard from '../components/pages/dashboard/Dashboard';
 
 const router = createBrowserRouter([
   { path: '/login', element: <Login /> },
-  { path: '/', element: <NewLayout />, children: [{ path: '/test', element: <Dashboard /> }] },
+  { path: '/', element: <NewLayout />, children: [{ path: '/main', element: <Dashboard /> }] },
 ]);
 
 const MenuRoute = () => {
