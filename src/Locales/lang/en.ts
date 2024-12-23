@@ -6,5 +6,6 @@ const er = {
 
   // Dashboard
   popular_product: 'Popular Product',
+  product_list: 'Product List',
 };
 export default er;

@@ -6,5 +6,6 @@ const kr = {
 
   // Dashboard
   popular_product: '인기 상품',
+  product_list: '상품 목록',
 };
 export default kr;
