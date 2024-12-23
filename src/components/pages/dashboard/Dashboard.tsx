@@ -3,13 +3,9 @@ import ProductList from '../../product';
 
 const Dashboard = () => {
   return (
-    <div className="flex flex-col">
-      <div>
-        <PopularProductList />
-      </div>
-      <div>
-        <ProductList />
-      </div>
+    <div className="flex flex-col gap-3">
+      <PopularProductList />
+      <ProductList />
     </div>
   );
 };

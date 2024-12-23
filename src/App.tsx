@@ -11,6 +11,7 @@ function App() {
     <>
       <Helmet>
         <title>{`${title}`}</title>
+        <link id="favicon" rel="icon" href="/favicon.svg" type="image/x-icon" />
       </Helmet>
       <GlobalStyle />
       <MenuRoute />

@@ -13,7 +13,7 @@ const NewLayout = () => {
       <Layout className="min-h-screen flex flex-col">
         <NewHeader />
         <Content className="px-12 pt-12 flex-1 overflow-y-auto max-h-[calc(100vh-65px)]">
-          <div className="bg-white h-full">
+          <div className="h-full">
             <Outlet />
           </div>
           <Footer className="text-center text-base h-[40px] flex items-center justify-center">
