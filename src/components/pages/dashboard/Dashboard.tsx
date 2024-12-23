@@ -4,12 +4,8 @@ import ProductList from '../../product';
 const Dashboard = () => {
   return (
     <div className="flex flex-col">
-      <div>
-        <PopularProductList />
-      </div>
-      <div>
-        <ProductList />
-      </div>
+      <PopularProductList />
+      <ProductList />
     </div>
   );
 };
