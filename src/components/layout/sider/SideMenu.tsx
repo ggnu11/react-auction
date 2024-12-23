@@ -15,7 +15,7 @@ const SideMenu = () => {
   };
   return (
     <Sider
-      className={`bg-white shadow-lg overflow-auto h-screen fixed inset-y-0 left-0 scrollbar-thin scrollbar-gutter-stable transition-transform duration-300 ${
+      className={`bg-white shadow-lg overflow-auto h-screen fixed inset-y-0 z-[5] left-0 scrollbar-thin scrollbar-gutter-stable transition-transform duration-300 ${
         sideMenuState ? 'translate-x-0' : '-translate-x-full'
       }`}
     >
