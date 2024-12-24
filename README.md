@@ -33,6 +33,7 @@
 - `yarn add -D tailwindcss postcss autoprefixer` 명령어로 라이브러리, 패키지 설치
 - `yarn tailwind init -p` 명령어로 tailwindcss config 파일 생성 / 초기화
 - tailwind.config.js 에 다음 코드 추가
+
 ```
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -47,7 +48,9 @@ module.exports = {
   plugins: [],
 };
 ```
+
 - `postcss.config.js`파일에 다음 코드 추가
+
 ```
 plugins: [
     require('tailwindcss'),
@@ -55,6 +58,7 @@ plugins: [
     require('postcss-flexbugs-fixes'),
   ],
 ```
+
 - index.css파일을 삭제하고 `src\assets\css\tailwind.css`파일을 생성 후 `tailwind.css` 상단에 `@tailwind base`, `@tailwind components`, `@tailwind utilities` 추가
 - Extensions에서 `Tailwind CSS IntelliSense` 설치
 - `index.tsx`에 `import './assets/css/tailwind.css';` 추가
@@ -106,3 +110,14 @@ export default MenuRoute;
 
 - `yarn add antd @types/antd`, `yarn add @ant-design/icons` 명령어로 antd, antd(타입), antd에서 제공하는 아이콘을 사용할때에 필요한 라이브러리를 설치한다.
 - https://ant.design/components/layout 사이트에 들어가서 원하는 레이아웃을 선택한 후 화면에 적용한다.
+
+<br/>
+
+## lodash vs lodash-es
+
+- lodash : CommonJS 모듈 시스템을 기반으로 하며, Node.js 환경에서 주로 사용. 전체 라이브러리를 한 번에 가져오는 방식.
+
+- lodash-es : ES 모듈 시스템을 사용하여, 모듈을 개별적으로 가져오는 방식(번들 최적화)
+
+- lodash 설치 : `yarn add lodash`, `yarn add @types/lodash`
+- lodash-es 설치 :`yarn add lodash-es`, `yarn add @types/lodash-es`
