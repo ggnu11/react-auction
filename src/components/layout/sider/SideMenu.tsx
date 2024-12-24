@@ -3,12 +3,15 @@ import { Layout, Menu } from 'antd';
 import { useRecoilValue } from 'recoil';
 import { isOpenSideMenu } from '../../../recoil/layout';
 import { useNavigate } from 'react-router';
+import { useTranslation } from 'react-i18next';
 
 const { Sider } = Layout;
 
 const SideMenu = () => {
-  const sideMenuState = useRecoilValue(isOpenSideMenu);
+  const { t } = useTranslation();
   const navigate = useNavigate();
+
+  const sideMenuState = useRecoilValue(isOpenSideMenu);
 
   const handleMenuClick = (path: string) => {
     navigate(path);
@@ -23,14 +26,14 @@ const SideMenu = () => {
         <div className="text-xl font-bold text-center">Logo</div>
       </div>
       <Menu theme="light" mode="inline" defaultSelectedKeys={['1']} className="mt-14">
-        <Menu.Item key="1" icon={<HomeOutlined />} onClick={() => handleMenuClick('/')}>
-          Home
+        <Menu.Item key="1" icon={<HomeOutlined />} onClick={() => handleMenuClick('/main')}>
+          {t('home')}
         </Menu.Item>
         <Menu.Item key="2" icon={<UserOutlined />} onClick={() => handleMenuClick('/profile')}>
-          Profile
+          {t('auction')}
         </Menu.Item>
         <Menu.Item key="3" icon={<SettingOutlined />} onClick={() => handleMenuClick('/settings')}>
-          Settings
+          {t('support')}
         </Menu.Item>
       </Menu>
     </Sider>
