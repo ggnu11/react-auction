@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { isOpenSideMenu } from '../../../recoil/layout';
 import TranslateButton from '../../button/TranslateButton';
 import LoginButton from '../../button/LoginButton';
+import Title from './title';
 
 const { Header } = Layout;
 const { Search } = Input;
@@ -25,10 +26,9 @@ const NewHeader = () => {
           <MenuOutlined className={`transition-transform duration-300 ${isRotated ? 'rotate-90' : ''}`} />
         </Button>
       </div>
-      <div className="flex-1 flex justify-center">
-        <Search placeholder="검색..." enterButton className="max-w-lg w-full" />
-      </div>
+      <Title />
       <div className="flex items-center space-x-4">
+        <Search placeholder="검색..." enterButton className="max-w-lg w-full" />
         <LoginButton />
         <TranslateButton />
       </div>
