@@ -7,7 +7,7 @@ const PopularProductList = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full h-[280px] mx-auto p-4 bg-white shadow-lg rounded-lg">
+    <div className="w-full h-[200px] mx-auto p-4 bg-white shadow-lg rounded-lg">
       <div className="text-5xl font-bold mb-4 text-center">{t('popular_product')}</div>
       <Image.PreviewGroup>
         <Carousel
@@ -20,7 +20,7 @@ const PopularProductList = () => {
         >
           {popularProductData.map((product) => (
             <div key={product.id} className="p-2">
-              <div className="h-[200px] flex items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
+              <div className="h-[100px] flex items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
                 <Image
                   src={product.image}
                   alt={product.name}

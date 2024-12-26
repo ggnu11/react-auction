@@ -121,3 +121,21 @@ export default MenuRoute;
 
 - lodash 설치 : `yarn add lodash`, `yarn add @types/lodash`
 - lodash-es 설치 :`yarn add lodash-es`, `yarn add @types/lodash-es`
+
+## 기술 스택
+
+> 1. react - https://github.com/facebook/react - 자바스크립트 프레임워크
+> 2. react-query - https://github.com/tanstack/query - 네트워크 요청한 데이터 캐싱 및 컨트롤
+> 3. react-router - https://github.com/remix-run/react-router - 브라우저 네비게이팅 처리
+> 4. React Helmet Async - https://www.npmjs.com/package/react-helmet-async - 메타데이터 관리를 돕는 라이브러리
+> 5. axios - https://github.com/axios/axios - 네트워크 요청
+> 6. recoil - https://github.com/facebookexperimental/Recoil - 상태 관리
+> 7. recoil-persist - https://github.com/polemius/recoil-persist - 상태 관리 localstorage 저장
+> 8. typescript - https://github.com/microsoft/TypeScript - 타입
+> 9. i18next - https://github.com/i18next/i18next - 다국어
+> 10. Ant Design (antd) - https://ant.design/ - UI 템플릿
+> 11. @ant-design/icons - https://ant.design/components/icon - Ant Design의 아이콘 패키지
+> 12. TailwindCSS - https://tailwindcss.com/ - CSS 프레임워크
+> 13. lodash-es - https://github.com/lodash/lodash - 데이터 조작 및 유틸리티 기능 라이브러리
+> 14. ESLint - https://eslint.org/ - JavaScript 린팅 도구
+> 15. Prettier - https://prettier.io/ - 코드 포맷팅 자동화 도구
