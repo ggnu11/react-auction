@@ -2,8 +2,8 @@ import { BankOutlined, HomeOutlined, TeamOutlined } from '@ant-design/icons';
 import { Layout, Menu } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router';
-import { useRecoilValue } from 'recoil';
 import { isOpenSideMenu } from '../../../recoil/layout';
+import { useRecoilState } from 'recoil';
 
 const { Sider } = Layout;
 
@@ -11,10 +11,11 @@ const SideMenu = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const sideMenuState = useRecoilValue(isOpenSideMenu);
+  const [sideMenuState, setSideMenuState] = useRecoilState(isOpenSideMenu);
 
   const handleMenuClick = (path: string) => {
     navigate(path);
+    setSideMenuState(false);
   };
 
   const menuItems = [

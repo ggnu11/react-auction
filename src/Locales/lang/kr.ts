@@ -13,6 +13,7 @@ const kr = {
   support: '고객지원',
 
   // Dashboard
+  Category: '카테고리',
   popular_product: '인기 상품',
   product_list: '상품 목록',
   exchange_rate: '환율',

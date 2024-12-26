@@ -13,6 +13,7 @@ const er = {
   support: 'Support',
 
   // Dashboard
+  Category: 'Category',
   popular_product: 'Popular Product',
   product_list: 'Product List',
   exchange_rate: 'Exchange Rate',
