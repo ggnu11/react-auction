@@ -54,7 +54,7 @@ const ExchangeRate = () => {
   }
 
   return (
-    <Card title={t('exchange_rate')} className="shadow-lg rounded-lg w-[500px] text-center">
+    <Card title={t('exchange_rate')} className="p-4 bg-white shadow-lg rounded-lg w-[500px] text-center">
       <CurrencyInput
         currency={baseCurrency}
         amount={baseAmount}
