@@ -1,19 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import { HelmetProvider } from 'react-helmet-async';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { RecoilRoot } from 'recoil';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './Locales/i18n';
+import './assets/css/tailwind.css';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      retry: false,
+      notifyOnChangeProps: 'tracked',
+    },
+  },
+});
+window.onload = () => {
+  console.log('language :: ', window.navigator.language);
+  render();
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+
+function render() {
+  root.render(
+    <React.StrictMode>
+      <HelmetProvider>
+        <QueryClientProvider client={queryClient}>
+          <RecoilRoot>
+            <App />
+          </RecoilRoot>
+        </QueryClientProvider>
+      </HelmetProvider>
+    </React.StrictMode>
+  );
+}
