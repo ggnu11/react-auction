@@ -1,4 +1,4 @@
-import { currentLanguage } from 'src/store/layout';
+import { currentLanguage } from '@store/layout';
 import Button from 'antd/es/button';
 import { useTranslation } from 'react-i18next';
 import { useRecoilState } from 'recoil';
