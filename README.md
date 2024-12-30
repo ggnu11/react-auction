@@ -18,7 +18,7 @@
 
 - `yarn add i18next @types/i18next react-i18next @types/react-i18next`로 라이브러리 설치
 - i18n.ts, en.ts, kr.ts 작성
-- index.ts에 import `'./Locales/i18n';` 추가
+- index.ts에 import `'./locales/i18n';` 추가
 
   <br/>
 
