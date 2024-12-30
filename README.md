@@ -113,7 +113,7 @@ export default MenuRoute;
 
 <br/>
 
-## lodash vs lodash-es
+## 10. lodash vs lodash-es
 
 - lodash : CommonJS 모듈 시스템을 기반으로 하며, Node.js 환경에서 주로 사용. 전체 라이브러리를 한 번에 가져오는 방식.
 
@@ -121,6 +121,20 @@ export default MenuRoute;
 
 - lodash 설치 : `yarn add lodash`, `yarn add @types/lodash`
 - lodash-es 설치 :`yarn add lodash-es`, `yarn add @types/lodash-es`
+
+<br/>
+
+## 11. Craco 설치
+
+- `yarn add @craco/craco` 명령어로 craco 설치
+- `package.json`파일의 `scripts` 부분을 `craco`로 수정
+- root 폴더에 `craco.config.ts` 파일 생성
+- `craco.config.ts`에 모듈 추가
+- `tsconfig.paths.json`에 `baseUrl`, `paths` 추가
+- `tsconfig.json`에 `"include": ["src"], "extends": "./tsconfig.paths.json"` 추가
+  > 주의사항 : 파일명이 `recoil`일 경우, `src/recoil`로 인식하는 것이 아닌 `typescript`의 `recoil` 모듈로 인식하여 에러가 발생하였다. 이를 방지하기 위해 모든 폴더 경로 별칭을 추가해야 한다(예: `@/`)
+
+<br/>
 
 ## 기술 스택
 

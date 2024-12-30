@@ -2,8 +2,8 @@ import { Card, Spin } from 'antd';
 import { get } from 'lodash-es';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import useExchangeRate from '../../hooks/exchange/useExchangeRate';
 import CurrencyInput from './cell';
+import useExchangeRate from '@hooks/exchange/useExchangeRate';
 
 const ExchangeRate = () => {
   const { t } = useTranslation();

@@ -1,7 +1,7 @@
-import PopularProductList from '../../product/popular-product';
-import ProductList from '../../product';
-import ExchangeRate from '../../exchange/ExchangeRate';
-import CategoryList from '../../product/category';
+import ExchangeRate from '@components/exchange/ExchangeRate';
+import ProductList from '@components/product';
+import CategoryList from '@components/product/category';
+import PopularProductList from '@components/product/popular-product';
 
 const Dashboard = () => {
   return (

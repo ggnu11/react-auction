@@ -1,15 +1,15 @@
-import Product1 from '../../assets/images/products/image1.jpg';
-import Product2 from '../../assets/images/products/image2.jpg';
-import Product3 from '../../assets/images/products/image3.jpg';
-import Product4 from '../../assets/images/products/image4.jpg';
-import Product5 from '../../assets/images/products/image5.jpg';
-import All from '../../assets/images/category/all.webp';
-import Electronics from '../../assets/images/category/electronics.webp';
-import Fashion from '../../assets/images/category/fashion.webp';
-import homeAppliances from '../../assets/images/category/home-appliances.webp';
-import Sports from '../../assets/images/category/sports.webp';
-import Toys from '../../assets/images/category/toys.webp';
-import Other from '../../assets/images/category/other.webp';
+import Product1 from '@assets/images/products/image1.jpg';
+import Product2 from '@assets/images/products/image2.jpg';
+import Product3 from '@assets/images/products/image3.jpg';
+import Product4 from '@assets/images/products/image4.jpg';
+import Product5 from '@assets/images/products/image5.jpg';
+import All from '@assets/images/category/all.webp';
+import Electronics from '@assets/images/category/electronics.webp';
+import Fashion from '@assets/images/category/fashion.webp';
+import homeAppliances from '@assets/images/category/home-appliances.webp';
+import Sports from '@assets/images/category/sports.webp';
+import Toys from '@assets/images/category/toys.webp';
+import Other from '@assets/images/category/other.webp';
 
 export const popularProductData = [
   { id: 1, name: 'Product 1', description: 'Description for product 1', image: Product1 },

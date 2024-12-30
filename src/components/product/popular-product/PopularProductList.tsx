@@ -1,7 +1,7 @@
+import { popularProductData } from '@components/data/data';
 import { Carousel, Image } from 'antd';
 
 import { useTranslation } from 'react-i18next';
-import { popularProductData } from '../../data/data';
 
 const PopularProductList = () => {
   const { t } = useTranslation();

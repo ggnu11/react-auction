@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Card, Col, Row } from 'antd';
-import { categoryData } from '../../data/data';
+import { categoryData } from '@components/data/data';
 
 const CategoryList = () => {
   const { t } = useTranslation();
