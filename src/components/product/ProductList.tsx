@@ -1,6 +1,6 @@
-import { popularProductData } from '../data/data';
+import NewCard from '@components/common/NewCard';
+import { popularProductData } from '@components/data/data';
 import { useTranslation } from 'react-i18next';
-import NewCard from '../common/NewCard';
 
 const ProductList = () => {
   const { t } = useTranslation();

@@ -1,4 +1,4 @@
-import LocationSrc from '../../../../assets/images/titleImg.png';
+import LocationSrc from '@assets/images/titleImg.png';
 
 const Title = () => {
   return (

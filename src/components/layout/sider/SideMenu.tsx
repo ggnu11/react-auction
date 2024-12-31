@@ -2,7 +2,7 @@ import { BankOutlined, HomeOutlined, TeamOutlined } from '@ant-design/icons';
 import { Layout, Menu } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router';
-import { isOpenSideMenu } from '../../../recoil/layout';
+import { isOpenSideMenu } from '../../../store/layout';
 import { useRecoilState } from 'recoil';
 
 const { Sider } = Layout;

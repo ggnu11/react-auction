@@ -1,9 +1,9 @@
+import NewLayout from '@components/layout/NewLayout';
+import Auction from '@components/pages/auction/Auction';
+import Dashboard from '@components/pages/dashboard/Dashboard';
+import Login from '@components/pages/login/Login';
+import Support from '@components/pages/support/Support';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Login from '../components/pages/login/Login';
-import NewLayout from '../components/layout/NewLayout';
-import Dashboard from '../components/pages/dashboard/Dashboard';
-import Auction from '../components/pages/auction/Auction';
-import Support from '../components/pages/support/Support';
 
 const router = createBrowserRouter([
   { path: '/login', element: <Login /> },

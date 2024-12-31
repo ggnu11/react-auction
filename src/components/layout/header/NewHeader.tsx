@@ -1,10 +1,10 @@
 import { MenuOutlined } from '@ant-design/icons';
+import LoginButton from '@components/button/LoginButton';
+import TranslateButton from '@components/button/TranslateButton';
 import { Button, Input, Layout } from 'antd';
 import { useRecoilState } from 'recoil';
-import { isOpenSideMenu } from '../../../recoil/layout';
-import TranslateButton from '../../button/TranslateButton';
-import LoginButton from '../../button/LoginButton';
 import Title from './title';
+import { isOpenSideMenu } from '@store/layout';
 
 const { Header } = Layout;
 const { Search } = Input;

@@ -1,7 +1,7 @@
+import { currentLanguage } from '@store/layout';
+import Button from 'antd/es/button';
 import { useTranslation } from 'react-i18next';
 import { useRecoilState } from 'recoil';
-import { currentLanguage } from '../../recoil/layout';
-import { Button } from 'antd';
 
 const TranslateButton = () => {
   const { i18n } = useTranslation();
