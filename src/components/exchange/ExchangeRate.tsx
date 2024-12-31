@@ -8,6 +8,7 @@ import useExchangeRate from '@hooks/exchange/useExchangeRate';
 const ExchangeRate = () => {
   const { t } = useTranslation();
   const { data: exchangeRate, isLoading } = useExchangeRate();
+  console.log('■■  exchangeRate ■■ :', exchangeRate);
 
   const [baseCurrency, setBaseCurrency] = useState('USD');
   const [targetCurrency, setTargetCurrency] = useState('KRW');
