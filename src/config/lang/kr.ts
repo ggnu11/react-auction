@@ -7,9 +7,14 @@ const kr = {
   // Header
   login: '로그인',
 
+  // Tab
+  table: '표',
+  chart: '차트',
+
   // Menu
   home: '홈',
   auction: '실시간 경매',
+  exchange: '환율',
   support: '고객지원',
 
   // Dashboard

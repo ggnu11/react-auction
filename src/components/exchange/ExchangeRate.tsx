@@ -2,16 +2,17 @@ import { Card, Spin } from 'antd';
 import { get } from 'lodash-es';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import CurrencyInput from './cell';
 import useExchangeRate from '@hooks/exchange/useExchangeRate';
+import { useRecoilState } from 'recoil';
+import { baseCurrencyState, targetCurrencyState } from '@store/dashboard';
+import { CurrencyInput, CurrencyTimeZone } from './cell';
 
 const ExchangeRate = () => {
   const { t } = useTranslation();
   const { data: exchangeRate, isLoading } = useExchangeRate();
-  console.log('■■  exchangeRate ■■ :', exchangeRate);
 
-  const [baseCurrency, setBaseCurrency] = useState('USD');
-  const [targetCurrency, setTargetCurrency] = useState('KRW');
+  const [baseCurrency, setBaseCurrency] = useRecoilState(baseCurrencyState);
+  const [targetCurrency, setTargetCurrency] = useRecoilState(targetCurrencyState);
   const [baseAmount, setBaseAmount] = useState(1);
   const [targetAmount, setTargetAmount] = useState(0);
 
@@ -70,6 +71,7 @@ const ExchangeRate = () => {
         onAmountChange={(value: string) => handleAmountChange('target', value)}
         exchangeRate={exchangeRate}
       />
+      <CurrencyTimeZone />
     </Card>
   );
 };

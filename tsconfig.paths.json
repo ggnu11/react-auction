@@ -5,7 +5,7 @@
       "@assets/*": ["./src/assets/*"],
       "@components/*": ["./src/components/*"],
       "@hooks/*": ["./src/hooks/*"],
-      "@locales/*": ["./src/locales/*"],
+      "@config/*": ["./src/config/*"],
       "@store/*": ["./src/store/*"],
       "@routes/*": ["./src/routes/*"],
       "@service/*": ["./src/service/*"],
