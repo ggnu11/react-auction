@@ -1,22 +1,7 @@
+import { NewCardProps } from '@/types/common';
 import Card from 'antd/es/card';
 import Col from 'antd/es/col';
 import Row from 'antd/es/row';
-
-interface Item {
-  id: number;
-  name: string;
-  image?: string;
-  description?: string;
-}
-
-interface NewCardProps {
-  title: string;
-  data: Item[];
-  colSpan?: { [key: string]: number };
-  cardStyle?: string;
-  imgStyle?: string;
-  cardMetaStyle?: string;
-}
 
 // xs: <576px, sm: ≥576px, md: ≥768px, lg: ≥992px, xl: ≥1200px, xxl: ≥1600px
 const NewCard = ({ title, data, colSpan, cardStyle, imgStyle, cardMetaStyle }: NewCardProps) => {

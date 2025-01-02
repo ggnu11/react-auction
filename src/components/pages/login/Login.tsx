@@ -1,12 +1,8 @@
 import { Form, Input, Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import 'tailwindcss/tailwind.css';
-import styles from '../../../assets/css/login.module.css';
-
-interface LoginFormValues {
-  username: string;
-  password: string;
-}
+import styles from '@assets/css/login.module.css';
+import { LoginFormValues } from '@/types/login';
 
 const Login = () => {
   const navigate = useNavigate();
