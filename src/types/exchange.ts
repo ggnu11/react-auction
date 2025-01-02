@@ -1,6 +1,7 @@
 export interface ExchangeFormValues {
   timespan: string;
   from: string;
+  to: string;
   sort: string;
   limit: number;
 }

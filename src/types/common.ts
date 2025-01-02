@@ -1,12 +1,12 @@
-// Controller
-interface ControllerListItem {
+// Select
+interface ControllListItem {
   key: string;
   value: string;
 }
 
 export interface NewControllerProps {
   name: string;
-  list: ControllerListItem[];
+  list?: ControllListItem[];
 }
 
 // Tab

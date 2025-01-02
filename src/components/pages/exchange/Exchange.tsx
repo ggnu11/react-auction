@@ -9,8 +9,8 @@ const Exchange = () => {
       timespan: 'hour',
       sort: 'asc',
       limit: 10,
-      startDate: dateToString(new Date()),
-      endDate: dateToString(new Date()),
+      from: dateToString(new Date()),
+      to: dateToString(new Date()),
     },
   });
 

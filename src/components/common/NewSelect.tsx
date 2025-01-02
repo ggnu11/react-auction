@@ -4,7 +4,7 @@ import { Controller, useFormContext } from 'react-hook-form';
 
 const { Option } = Select;
 
-const NewController = ({ name, list }: NewControllerProps) => {
+const NewSelect = ({ name, list }: NewControllerProps) => {
   const { control } = useFormContext();
 
   return (
@@ -13,7 +13,7 @@ const NewController = ({ name, list }: NewControllerProps) => {
       control={control}
       render={({ field }) => (
         <Select {...field} placeholder={`Select ${name}`} className="w-full">
-          {list.map((item) => (
+          {list?.map((item) => (
             <Option key={item.key} value={item.key}>
               {item.value}
             </Option>
@@ -23,4 +23,5 @@ const NewController = ({ name, list }: NewControllerProps) => {
     />
   );
 };
-export default NewController;
+
+export default NewSelect;
