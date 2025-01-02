@@ -7,9 +7,14 @@ const er = {
   // Header
   login: 'Login',
 
+  // Tab
+  table: 'Table',
+  chart: 'Chart',
+
   // Menu
   home: 'Home',
   auction: 'Live Auction',
+  exchange: 'Exchange Rate',
   support: 'Support',
 
   // Dashboard

@@ -1,4 +1,4 @@
-import { BankOutlined, HomeOutlined, TeamOutlined } from '@ant-design/icons';
+import { BankOutlined, DollarOutlined, HomeOutlined, TeamOutlined } from '@ant-design/icons';
 import { Layout, Menu } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router';
@@ -33,6 +33,12 @@ const SideMenu = () => {
     },
     {
       key: '3',
+      icon: <DollarOutlined />,
+      label: t('exchange'),
+      onClick: () => handleMenuClick('/exchange'),
+    },
+    {
+      key: '4',
       icon: <TeamOutlined />,
       label: t('support'),
       onClick: () => handleMenuClick('/support'),
