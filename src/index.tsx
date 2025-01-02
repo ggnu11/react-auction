@@ -4,7 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { RecoilRoot } from 'recoil';
 import App from './App';
-import './locales/i18n';
+import '@config/i18n';
 import './assets/css/tailwind.css';
 
 const queryClient = new QueryClient({
