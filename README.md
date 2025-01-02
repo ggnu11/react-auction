@@ -142,6 +142,16 @@ export default MenuRoute;
 
 <br/>
 
+## 13. react-moment 설치
+
+- `yarn add react-moment` 명령어로 react-monent 설치
+
+## 14. moment-timezone 설치
+
+- `yarn add moment-timezone` 명령어로 moment-timezone 설치
+
+<br/>
+
 ## 기술 스택
 
 > 1. react - https://github.com/facebook/react - 자바스크립트 프레임워크
