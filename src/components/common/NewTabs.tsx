@@ -1,14 +1,5 @@
+import { NewTabsProps } from '@/types/common';
 import Tabs, { TabsProps } from 'antd/es/tabs';
-
-interface NewTabProps {
-  title: string;
-  children: React.ReactNode;
-}
-
-interface NewTabsProps {
-  list: NewTabProps[];
-  onChange?: (key: string) => void;
-}
 
 const NewTab: React.FC<NewTabsProps> = ({ list, onChange }) => {
   const items: TabsProps['items'] = list.map((tab, index) => ({

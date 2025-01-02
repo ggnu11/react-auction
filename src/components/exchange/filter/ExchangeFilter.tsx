@@ -1,13 +1,7 @@
 import { useFormContext, Controller } from 'react-hook-form';
 import { Input, Button } from 'antd';
 import NewController from '@components/common/NewController';
-
-interface ExchangeFormValues {
-  timespan: string;
-  from: string;
-  sort: string;
-  limit: number;
-}
+import { ExchangeFormValues } from '@/types/exchange';
 
 const ExchangeFilter = () => {
   const { control, handleSubmit } = useFormContext<ExchangeFormValues>();

@@ -1,15 +1,6 @@
+import { NewControllerProps } from '@/types/common';
 import Select from 'antd/es/select';
 import { Controller, useFormContext } from 'react-hook-form';
-
-interface ListItem {
-  key: string;
-  value: string;
-}
-
-interface NewControllerProps {
-  name: string;
-  list: ListItem[];
-}
 
 const { Option } = Select;
 

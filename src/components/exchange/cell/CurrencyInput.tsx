@@ -1,13 +1,6 @@
+import { CurrencyInputProps } from '@/types/exchange';
 import Input from 'antd/es/input';
 import Select from 'antd/es/select';
-
-interface CurrencyInputProps {
-  currency: string;
-  amount: number;
-  onCurrencyChange: (value: string) => void;
-  onAmountChange: (value: string) => void;
-  exchangeRate: { conversion_rates: { [key: string]: number } };
-}
 
 const { Option } = Select;
 
