@@ -1,4 +1,4 @@
-import Tabs, { TabsProps } from 'antd/es/tabs';
+import NewTab from '@components/common/NewTabs';
 import ExchangeChart from './chart/ExchangeChart';
 import ExchangeTable from './table/ExchangeTable';
 import { useTranslation } from 'react-i18next';
@@ -6,26 +6,20 @@ import { useTranslation } from 'react-i18next';
 const ExchangeResult = () => {
   const { t } = useTranslation();
 
-  const onChange = (key: string) => {
-    console.log(key);
-  };
-
-  const items: TabsProps['items'] = [
+  const tabs = [
     {
-      key: '1',
-      label: t('table'),
+      title: t('table'),
       children: <ExchangeTable />,
     },
     {
-      key: '2',
-      label: t('chart'),
+      title: t('chart'),
       children: <ExchangeChart />,
     },
   ];
 
   return (
     <div>
-      <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+      <NewTab list={tabs} />
     </div>
   );
 };
