@@ -136,6 +136,12 @@ export default MenuRoute;
 
 <br/>
 
+## 12. echarts-for-react 설치
+
+- `yarn add echarts-for-react echarts` 명령어로 echarts-for-react 설치
+
+<br/>
+
 ## 기술 스택
 
 > 1. react - https://github.com/facebook/react - 자바스크립트 프레임워크
@@ -153,3 +159,5 @@ export default MenuRoute;
 > 13. lodash-es - https://github.com/lodash/lodash - 데이터 조작 및 유틸리티 기능 라이브러리
 > 14. ESLint - https://eslint.org/ - JavaScript 린팅 도구
 > 15. Prettier - https://prettier.io/ - 코드 포맷팅 자동화 도구
+> 16. Craco - CRA 설정 커스터마이즈 도구
+> 17. Echart for React - 데이터 시각화
