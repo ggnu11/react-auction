@@ -25,6 +25,7 @@ const kr = {
   validation_require: '필수 값입니다.',
   validation_from: '시작 날짜를 선택해주세요.',
   validation_to: '종료 날짜를 선택해주세요.',
+  validation_to_before_from: '종료 날짜는 시작 날짜보다 앞일 수 없습니다.',
 
   // Dashboard
   category: '카테고리',

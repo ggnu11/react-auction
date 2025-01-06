@@ -2,15 +2,22 @@ import { fieldsValueProps } from '@/types/exchange';
 import ExchangeFilter from '@components/exchange/filter/ExchangeFilter';
 import ExchangeResult from '@components/exchange/result/ExchangeResult';
 import Form from 'antd/es/form';
+import dayjs from 'dayjs';
 
 const Exchange = () => {
-  const [form] = Form.useForm();
   const onFinish = (fieldsValue: fieldsValueProps) => {
-    console.log('■■  fieldsValue ■■ :', fieldsValue);
+    const from = dayjs(fieldsValue.from).format('YYYY-MM-DD');
+    const to = dayjs(fieldsValue.to).format('YYYY-MM-DD');
+    const params = {
+      ...fieldsValue,
+      from,
+      to,
+    };
+    console.log('■■  params ■■ :', params);
   };
 
   return (
-    <Form form={form} onFinish={onFinish}>
+    <Form onFinish={onFinish}>
       <ExchangeFilter />
       <ExchangeResult />
     </Form>

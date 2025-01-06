@@ -4,6 +4,8 @@ import { HelmetProvider } from 'react-helmet-async';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { RecoilRoot } from 'recoil';
 import App from './App';
+import dayjs from 'dayjs';
+import isLeapYear from 'dayjs/plugin/isLeapYear';
 import '@config/i18n';
 import './assets/css/tailwind.css';
 
@@ -19,6 +21,7 @@ const queryClient = new QueryClient({
 window.onload = () => {
   render();
 };
+dayjs.extend(isLeapYear);
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 function render() {

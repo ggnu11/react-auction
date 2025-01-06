@@ -152,6 +152,10 @@ export default MenuRoute;
 
 <br/>
 
+## antd - Form 주의사항
+
+- `Form.Item` 안에 `label`, `div` 와 `Select`, `DatePicker` 등을 함께 사용할 경우, 값을 선택한 상황이여도 `label`,`div`로 인해 **required** 상태가 된다.
+
 ## 기술 스택
 
 > 1. react - https://github.com/facebook/react - 자바스크립트 프레임워크

@@ -1,4 +1,5 @@
 import { Button, DatePicker, Form, Input, Select } from 'antd';
+import dayjs from 'dayjs';
 import { useTranslation } from 'react-i18next';
 
 const { Option } = Select;
@@ -24,8 +25,8 @@ const ExchangeFilter = () => {
     <div className="p-4 bg-white shadow-md rounded-lg">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <div>
+          <label className="block text-gray-700">Timespan</label>
           <Form.Item name="timespan" rules={[{ required: true, message: t('validation_require') }]}>
-            <label className="block text-gray-700">Timespan</label>
             <Select placeholder={`Select ${name}`} className="w-full">
               {timespanList?.map((item) => (
                 <Option key={item.key} value={item.key}>
@@ -36,8 +37,8 @@ const ExchangeFilter = () => {
           </Form.Item>
         </div>
         <div>
+          <label className="block text-gray-700">Sort</label>
           <Form.Item name="sort">
-            <label className="block text-gray-700">Sort</label>
             <Select placeholder={`Select sort`} className="w-full">
               {sortList?.map((item) => (
                 <Option key={item.key} value={item.key}>
@@ -48,20 +49,34 @@ const ExchangeFilter = () => {
           </Form.Item>
         </div>
         <div>
+          <label className="block text-gray-700">From</label>
           <Form.Item name="from" rules={[{ required: true, message: t('validation_from') }]}>
-            <label className="block text-gray-700">From</label>
             <DatePicker className="w-full" />
           </Form.Item>
         </div>
         <div>
-          <Form.Item name="to" rules={[{ required: true, message: t('validation_to') }]}>
-            <label className="block text-gray-700">To</label>
+          <label className="block text-gray-700">To</label>
+          <Form.Item
+            name="to"
+            rules={[
+              { required: true, message: t('validation_to') },
+              ({ getFieldValue }) => ({
+                validator(_, value) {
+                  const from = getFieldValue('from');
+                  if (!value || !from || dayjs(value).isAfter(dayjs(from))) {
+                    return Promise.resolve();
+                  }
+                  return Promise.reject(new Error(t('validation_to_before_from')));
+                },
+              }),
+            ]}
+          >
             <DatePicker className="w-full" />
           </Form.Item>
         </div>
         <div>
+          <label className="block text-gray-700">Limit</label>
           <Form.Item name="limit">
-            <label className="block text-gray-700">Limit</label>
             <Input placeholder={t('exchange_limit_placeholder')} type="number" className="w-full" />
           </Form.Item>
         </div>

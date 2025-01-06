@@ -25,6 +25,7 @@ const er = {
   validation_require: 'Required value',
   validation_from: 'Please select a start date',
   validation_to: 'Please select an end date',
+  validation_to_before_from: 'The end date cannot be earlier than the start date',
 
   // Dashboard
   category: 'Category',
