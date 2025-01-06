@@ -1,9 +1,9 @@
-export interface ExchangeFormValues {
+export interface fieldsValueProps {
   timespan: string;
   from: string;
   to: string;
-  sort: string;
-  limit: number;
+  sort?: string;
+  limit?: number;
 }
 
 export interface CurrencyInputProps {
