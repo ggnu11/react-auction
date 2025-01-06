@@ -17,10 +17,8 @@ const queryClient = new QueryClient({
   },
 });
 window.onload = () => {
-  console.log('language :: ', window.navigator.language);
   render();
 };
-
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 function render() {

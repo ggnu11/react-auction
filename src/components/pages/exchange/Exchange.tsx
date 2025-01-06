@@ -1,26 +1,15 @@
 import ExchangeFilter from '@components/exchange/filter/ExchangeFilter';
 import ExchangeResult from '@components/exchange/result/ExchangeResult';
-import { dateToString } from '@service/date';
-import { FormProvider, useForm } from 'react-hook-form';
+import Form from 'antd/es/form';
 
 const Exchange = () => {
-  const methods = useForm({
-    defaultValues: {
-      timespan: 'hour',
-      sort: 'asc',
-      limit: 10,
-      from: dateToString(new Date()),
-      to: dateToString(new Date()),
-    },
-  });
-
   return (
-    <FormProvider {...methods}>
+    <Form>
       <div>
         <ExchangeFilter />
         <ExchangeResult />
       </div>
-    </FormProvider>
+    </Form>
   );
 };
 

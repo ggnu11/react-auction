@@ -1,17 +1,8 @@
-import { ExchangeFormValues } from '@/types/exchange';
-import NewDatePicker from '@components/common/NewDatePicker';
-import NewInput from '@components/common/NewInput';
-import NewSelect from '@components/common/NewSelect';
-import { Button } from 'antd';
-import { useFormContext } from 'react-hook-form';
+import { Button, DatePicker, Form, Input, Select } from 'antd';
+
+const { Option } = Select;
 
 const ExchangeFilter = () => {
-  const { handleSubmit } = useFormContext<ExchangeFormValues>();
-
-  const onSubmit = (data: ExchangeFormValues) => {
-    console.log(data);
-  };
-
   const timespanList = [
     { key: 'hour', value: 'Hour' },
     { key: 'day', value: 'Day' },
@@ -26,33 +17,53 @@ const ExchangeFilter = () => {
 
   return (
     <div className="p-4 bg-white shadow-md rounded-lg">
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div>
+          <Form.Item label="timespan">
             <label className="block text-gray-700">Timespan</label>
-            <NewSelect name="timespan" list={timespanList} />
-          </div>
-          <div>
-            <label className="block text-gray-700">Sort</label>
-            <NewSelect name="sort" list={sortList} />
-          </div>
-          <div>
-            <label className="block text-gray-700">From</label>
-            <NewDatePicker name="from" />
-          </div>
-          <div>
-            <label className="block text-gray-700">To</label>
-            <NewDatePicker name="to" />
-          </div>
-          <div>
-            <label className="block text-gray-700">Limit</label>
-            <NewInput name="limit" />
-          </div>
+            <Select placeholder={`Select ${name}`} className="w-full">
+              {timespanList?.map((item) => (
+                <Option key={item.key} value={item.key}>
+                  {item.value}
+                </Option>
+              ))}
+            </Select>
+          </Form.Item>
         </div>
-        <Button type="primary" htmlType="submit" className="mt-4">
-          조회
-        </Button>
-      </form>
+        <div>
+          <Form.Item label="sort">
+            <label className="block text-gray-700">Sort</label>
+            <Select placeholder={`Select sort`} className="w-full">
+              {sortList?.map((item) => (
+                <Option key={item.key} value={item.key}>
+                  {item.value}
+                </Option>
+              ))}
+            </Select>
+          </Form.Item>
+        </div>
+        <div>
+          <Form.Item label="from">
+            <label className="block text-gray-700">From</label>
+            <DatePicker className="w-full" />
+          </Form.Item>
+        </div>
+        <div>
+          <Form.Item label="to">
+            <label className="block text-gray-700">To</label>
+            <DatePicker className="w-full" />
+          </Form.Item>
+        </div>
+        <div>
+          <Form.Item label="limit">
+            <label className="block text-gray-700">Limit</label>
+            <Input placeholder="Limit" type="number" className="w-full" />
+          </Form.Item>
+        </div>
+      </div>
+      <Button type="primary" htmlType="submit" className="mt-4">
+        조회
+      </Button>
     </div>
   );
 };
