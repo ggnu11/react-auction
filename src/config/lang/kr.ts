@@ -4,6 +4,10 @@ const kr = {
   language_en: 'English',
   language_kr: '한국어',
 
+  // Button
+  search: '조회',
+  reset: '초기화',
+
   // Header
   login: '로그인',
 
@@ -16,6 +20,12 @@ const kr = {
   auction: '실시간 경매',
   exchange: '환율',
   support: '고객지원',
+
+  // Validation
+  validation_require: '필수 값입니다.',
+  validation_from: '시작 날짜를 선택해주세요.',
+  validation_to: '종료 날짜를 선택해주세요.',
+  validation_to_before_from: '종료 날짜는 시작 날짜보다 앞일 수 없습니다.',
 
   // Dashboard
   category: '카테고리',
@@ -30,5 +40,14 @@ const kr = {
   category_home_appliance: '가전제품',
   category_toys: '장난감',
   category_other: '기타',
+
+  // Exchange
+  exchange_minute: '분',
+  exchange_hour: '시간',
+  exchange_day: '일',
+  exchange_week: '주',
+  exchange_month: '월',
+  exchange_year: '년',
+  exchange_limit_placeholder: '기본값 5000개',
 };
 export default kr;

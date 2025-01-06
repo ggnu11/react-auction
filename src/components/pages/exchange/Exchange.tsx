@@ -1,26 +1,26 @@
+import { fieldsValueProps } from '@/types/exchange';
 import ExchangeFilter from '@components/exchange/filter/ExchangeFilter';
 import ExchangeResult from '@components/exchange/result/ExchangeResult';
-import { dateToString } from '@service/date';
-import { FormProvider, useForm } from 'react-hook-form';
+import Form from 'antd/es/form';
+import dayjs from 'dayjs';
 
 const Exchange = () => {
-  const methods = useForm({
-    defaultValues: {
-      timespan: 'hour',
-      sort: 'asc',
-      limit: 10,
-      from: dateToString(new Date()),
-      to: dateToString(new Date()),
-    },
-  });
+  const onFinish = (fieldsValue: fieldsValueProps) => {
+    const from = dayjs(fieldsValue.from).format('YYYY-MM-DD');
+    const to = dayjs(fieldsValue.to).format('YYYY-MM-DD');
+    const params = {
+      ...fieldsValue,
+      from,
+      to,
+    };
+    console.log('■■  params ■■ :', params);
+  };
 
   return (
-    <FormProvider {...methods}>
-      <div>
-        <ExchangeFilter />
-        <ExchangeResult />
-      </div>
-    </FormProvider>
+    <Form onFinish={onFinish}>
+      <ExchangeFilter />
+      <ExchangeResult />
+    </Form>
   );
 };
 

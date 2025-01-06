@@ -4,6 +4,10 @@ const er = {
   language_en: 'English',
   language_kr: '한국어',
 
+  // Button
+  search: 'Search',
+  reset: 'Reset',
+
   // Header
   login: 'Login',
 
@@ -16,6 +20,12 @@ const er = {
   auction: 'Live Auction',
   exchange: 'Exchange Rate',
   support: 'Support',
+
+  // Validation
+  validation_require: 'Required value',
+  validation_from: 'Please select a start date',
+  validation_to: 'Please select an end date',
+  validation_to_before_from: 'The end date cannot be earlier than the start date',
 
   // Dashboard
   category: 'Category',
@@ -30,5 +40,14 @@ const er = {
   category_home_appliance: 'Home Appliance',
   category_toys: 'Toys',
   category_other: 'Other',
+
+  // Exchange
+  exchange_minute: 'Minute',
+  exchange_hour: 'Hour',
+  exchange_day: 'Day',
+  exchange_week: 'Week',
+  exchange_month: 'Month',
+  exchange_year: 'Year',
+  exchange_limit_placeholder: 'Default 5000',
 };
 export default er;

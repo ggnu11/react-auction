@@ -5,17 +5,18 @@ module.exports = {
     node: true,
   },
   extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
+    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
-  plugins: ["prettier", "@typescript-eslint"],
+  plugins: ['prettier', '@typescript-eslint'],
   rules: {
-    "@typescript-eslint/ban-ts-comment": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
+    '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
   },
   parserOptions: {
-    parser: "@typescript-eslint/parser",
+    parser: '@typescript-eslint/parser',
   },
 };
